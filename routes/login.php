@@ -15,12 +15,15 @@ $app->post('/api/v1/login', function ($request, $response, $args) { //POST examp
 		]);
 
 		if ($user){
-			return json_encode($user);
+			$object = ["Status" => 200, "Comment" => "user exist", "Id" => $user->id];
+			return json_encode($object);
 		} else {
-			return json_encode("404 User not found :(");
+			$object = ["Status" => 403, "Comment" => "user not exist"];
+			return json_encode($object);
 		}
 	} else {
-		return json_encode("too short data");
+		$object = ["Status" => 500, "Comment" => "user not exist"];
+		return json_encode($object);
 	}
 });
 
