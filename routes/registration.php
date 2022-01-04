@@ -17,9 +17,11 @@ $app->post('/api/v1/registration', function ($request, $response, $args){
 
         R::store($newUser);
 
-        return json_encode(["Status" => 200, "Comment" => "user was created successfully"]);
+        $object = ["Status" => 200, "Comment" => "user was created successfully"];
+        return json_encode($object);
     } else {
-        return json_encode("too short data");
+        $object = ["Status" => 500, "Comment" => "too short data"];
+        return json_encode($object);
     }
 
 });
