@@ -15,7 +15,7 @@ $app->post('/api/v1/login', function ($request, $response, $args) { //POST examp
 		]);
 
 		if ($user){
-			$object = ["Status" => 200, "Comment" => "user exist", "Id" => $user->id];
+			$object = ["Status" => 200, "Comment" => "user exist", "Id" => $user->id, "Nick" => $user->nick];
 			return json_encode($object);
 		} else {
 			$object = ["Status" => 403, "Comment" => "user not exist"];
