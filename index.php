@@ -2,7 +2,7 @@
 require 'vendor/autoload.php';
 class_alias('\RedBeanPHP\R', '\R');
 
-R::setup('mysql:host=localhost;dbname=auth','root', 'root');
+R::setup('mysql:host=db4free.net:3306;dbname=creativesspace','creativesspace', 'WeWantPeace!');
 if(!R::testConnection()) die('No DB connection!');
 
 $configuration = [
