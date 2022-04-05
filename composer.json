@@ -1,6 +1,7 @@
 {
     "require": {
         "gabordemooij/redbean": "^5.7",
-        "slim/slim": "3.10.0"
+        "slim/slim": "3.10.0",
+        "ext-mbstring": "*"
     }
 }
